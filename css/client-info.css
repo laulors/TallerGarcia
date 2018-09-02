@@ -1,0 +1,52 @@
+/*
+#003B92
+#007FF2
+#0099E7
+#28C2FF
+*/
+.two-inputs{
+  display: inline-block;
+  vertical-align:middle;
+  width: 55%;
+  resize: horizontal;
+  margin-bottom: 1px;
+  text-align: justify;
+}
+.three-inputs{
+  display: inline-block;
+  vertical-align: middle;
+  width: 27%;
+  resize: vertical;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 1px;
+  text-align: justify;
+}
+.add-much-space{
+  padding-top: 15px;
+  padding-bottom: 6px;
+}
+.add-space{
+  padding-bottom: 1px;
+}
+.adduser{
+  /* background: rgba(25,255,5, 0.6); */
+  display: inline-block;
+  /* background-color:#74b3ce; */
+  background-color:#0A6BA8;
+  text-align: center;
+  border-radius: 5px;
+}
+
+body{
+  background-color:#0A2470;
+  padding: 4px;
+  margin-top: 1em;
+  text-align: center;
+}
+/*
+#003B92
+#007FF2
+#0099E7
+#28C2FF
+*/
