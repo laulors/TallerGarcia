@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <!-- Photo by rawpixel on Unsplash -->
   <head>
     <meta charset="utf-8">
-    <title>Registrar Trabajo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrar Cliente</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/client-info.css">
-
+    <link rel="stylesheet" href="../css/registrarCliente.css">
   </head>
   <body>
     <div class="container sort">
       <form class="adduser text-justify" action="index.html" method="post">
         <div class="form-group paint">
         <div class="add-space">
-          <h1>Información de cliente</h1>
+          <h1>Registrar
+             cliente</h1>
         </div>
-        <!-- Nombre BEGIN -->
         <div class="form-group two-inputs">
           <label for="namef">Nombre</label>
           <input type="text" class="form-control col-xs-3 col-lg-2" name="namef" id="namef" value="">
         </div>
-        <!-- Nombre END -->
-        <!-- Apellido BEGIN -->
         <div class="form-group two-inputs">
           <label for="lastnf">Apellido</label>
           <input type="text" class="form-control" name="lastnf" id="lastnf" value="">
         </div>
-        <!-- Apellido END -->
-        <!-- Calle BEGIN -->
         <div class="form-group two-inputs">
           <label for="streetf">Calle</label>
           <input type="text" class="form-control" name="streetf" id="streetf" value="">
         </div>
-        <!-- Calle END -->
-        <!-- Numero Interior and Exterior BEGIN -->
         <div class="form-group">
         <div class="form-group three-inputs">
           <label for="numberf">No. interior</label>
@@ -44,8 +38,6 @@
           <input type="text" class="form-control col-xs-3" name="numberf" id="numberf" value="">
         </div>
         </div>
-        <!-- Numero Interior y Exterior END -->
-        <!-- Colonia and Telefono BEGIN -->
         <div class="form-group">
           <div class="form-group three-inputs">
             <label for="neighbf">Colonia</label>
@@ -56,8 +48,6 @@
           <input type="text" class="form-control" name="telephonef" id="telephonef" value="">
           </div>
         </div>
-        <!-- Colonia and Telefono END -->
-        <!-- Municipio Dropdown and SUBMIT button BEGIN-->
         <div class="form-group">
           <div class="form-group two-inputs">
           <label for="select-municipio">Municipio</label>
@@ -75,11 +65,20 @@
           </ul>
           </div>
           </div>
-          <div class="add-much-space">
-            <input type="submit" name="submit" value="Registrar" class="btn btn-primary">
-          </div>
         </div>
-        <!-- Municipio Dropdown and SUBMIT button END-->
+        <div class="form-group">
+        <div class="form-group two-inputs">
+          <label for="numberf">Email</label>
+          <input type="text" class="form-control col-xs-3" name="numberf" id="numberf" value="">
+        </div>
+        <div class="form-group two-inputs">
+          <label for="numberf">Apodo/NombreUsuario</label>
+          <input type="text" class="form-control col-xs-3" name="numberf" id="numberf" value="">
+        </div>
+        </div>
+        </div>
+        <div class="add-much-space">
+          <input type="submit" name="submit" value="Registrar" class="btn btn-primary">
         </div>
       </form>
   </body>

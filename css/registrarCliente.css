@@ -22,6 +22,9 @@
   padding: 1px;
   text-align: justify;
 }
+.left-aligment{
+  text-align: left;
+}
 .add-much-space{
   padding-top: 15px;
   padding-bottom: 6px;

@@ -13,21 +13,18 @@
 body {
   padding-top: 50px;
 }
-
-
-/*
- * Global add-ons
- */
-
+.dropdown-menu{
+  padding: 1em;
+  font-size: 1em;
+  text-align: justify;
+}
+.dropdown-toggle{
+  font-size: 1.3em;
+}
 .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
-
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
 .navbar-fixed-top {
   border: 0;
 }
@@ -77,7 +74,6 @@ body {
 /*
  * Main content
  */
-
 .main {
   padding: 20px;
 }
@@ -97,7 +93,7 @@ body {
  */
 
 .placeholders {
-  margin-bottom: 30px;
+  margin-bottom: 30em;
   text-align: center;
 }
 .placeholders h4 {
