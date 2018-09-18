@@ -30,23 +30,24 @@
   padding-bottom: 1px;
 }
 .adduser{
-  /* background: rgba(25,255,5, 0.6); */
+  background: rgba(61,112,178, 0.2);
   display: inline-block;
-  /* background-color:#74b3ce; */
-  background-color:#0A6BA8;
+  /* background-color: #f4f7fb; */
+  /* background-color: #3d70b2; */
   text-align: center;
   border-radius: 5px;
 }
-
+h1{
+  color:#294c86;
+}
 body{
-  background-color:#0A2470;
+  /* Photo by Brandi Redd on Unsplash */
+  background-color: #dfe3e6;
+  background-size: contain;
   padding: 4px;
   margin-top: 1em;
   text-align: center;
+  /* font-family: "Verdana", Times, serif; */
+  font-family: Arial, Helvetica, sans-serif;
+
 }
-/*
-#003B92
-#007FF2
-#0099E7
-#28C2FF
-*/
