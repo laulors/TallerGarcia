@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registrar Cliente</title>
+    <title>Registrar Trabajo</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/registrar.css">
   </head>
@@ -12,9 +12,8 @@
     <div class="container sort">
       <form class="adduser text-justify" action="index.html" method="post">
         <div class="form-group paint">
-        <div class="add-space">
-          <h1>Registrar
-             cliente</h1>
+        <div class="">
+            <h3>Información de cliente</h3>
         </div>
         <div class="form-group two-inputs">
           <label for="campoNombre">Nombre</label>
@@ -49,8 +48,8 @@
         <div class="form-group two-inputs">
           <label for="Municipio"> Locación </label>
         </div>
-        <div class="form-group two-inputs">
-          <select class="form-control" name="Municipio">
+        <div class="form-group two-inputs" >
+          <select class="form-control" name="Municipio" contenteditable="false">
           <option>San Juan Cosala</option>
           <option>Guadalajara</option>
           <option>Zapopan</option>
@@ -60,9 +59,52 @@
           <option>Puente Grande</option>
           </select>
         </div>
+        <div class="">
+            <h3>Información de reparación</h3>
         </div>
-        <div class="add-much-space">
-          <input type="submit" name="submit" value="Registrar" class="btn btn-primary">
+        <div class="form-group two-inputs">
+          <label for="">Tipo de Trabajo</label>
+          <!-- <input type="text" class="form-control" name="tipoDeT" id="tipoDeT" value=""> -->
+          <select class="form-control" name="tipoDeT" id="selectTipoDeT" contenteditable="false" >
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          </select>
+        </div>
+        <div class="form-group two-inputs">
+        <label for="campoElectrodomestico">Electrodomestico</label>
+        <input type="text" class="form-control" name="campoElectrodomestico" id="campoElectrodomestico" value="">
+        </div>
+        <div class="form-group">
+          <div class="form-group three-inputs">
+            <label for="fnac">Fecha de finalización<span class="fa fa-xs fa-asterisk"></label>
+            <div class="input-group">
+              <input type="date" name="fechaFinalizacion" id="fechaFinalizacion" class="form-control" required>
+          </div>
+          </div>
+          <div class="form-group three-inputs">
+            <label for="fechaRealizacion">Fecha de Realizacion<span class="fa fa-xs fa-asterisk"></label>
+            <div class="input-group">
+              <input type="date" name="fechaRealizacion" id="fechaRealizacion" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group two-inputs">
+					<label for="fechaGarantia">Fecha de Garantía<span class="fa fa-xs fa-asterisk"></label>
+					<div class="input-group">
+						<input type="date" name="fechaGarantia" id="fechaGarantia" class="form-control" required>
+				  </div>
+        </div>
+
+        <div class="form-group">
+            <div class="add-much-space">
+            <input type="submit" name="submit" value="Registrar" class="btn btn-primary">
+          </div>
+        </div>
         </div>
       </form>
   </body>

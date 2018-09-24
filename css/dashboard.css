@@ -9,29 +9,37 @@
  * Base structure
  */
 
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 5em;
+  background-color: #dfe3e6;
 }
 .dropdown-menu{
-  padding: 1em;
+  padding: .8em;
   font-size: 1em;
-  text-align: justify;
 }
 .dropdown-toggle{
-  font-size: 1.3em;
+  font-size: 1.2em;
+  color: white;
 }
 .sub-header {
-  padding-bottom: 10px;
+  padding-bottom: .5em;
   border-bottom: 1px solid #eee;
+  color: white;
 }
 .navbar-fixed-top {
   border: 0;
+}
+.page-header{
+  color:white;
 }
 
 /*
  * Sidebar
  */
+a{
+  text-align: center;
+}
+
 
 /* Hide for mobile, show later */
 .sidebar {
@@ -50,6 +58,11 @@ body {
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #f5f5f5;
     border-right: 1px solid #eee;
+  }
+  .dropdown-menu{
+    padding: .8em;
+    font-size: 1em;
+    text-align:center;
   }
 }
 
@@ -93,14 +106,14 @@ body {
  */
 
 .placeholders {
-  margin-bottom: 30em;
+  margin-bottom: 2em;
   text-align: center;
 }
 .placeholders h4 {
-  margin-bottom: 0;
+  margin-bottom: .2em;
 }
 .placeholder {
-  margin-bottom: 20px;
+  margin-bottom: .4em;
 }
 .placeholder img {
   display: inline-block;
