@@ -10,9 +10,9 @@
   </head>
   <body>
     <div class="container sort">
-      <form class="adduser text-justify" action="index.html" method="post">
+      <form class="adduser text-justify" action="agregarTrabajo.php" method="post">
         <div class="form-group paint">
-        <div class="">
+        <div>
             <h3>Información de cliente</h3>
         </div>
         <div class="form-group two-inputs">
@@ -30,20 +30,20 @@
         <div class="form-group">
         <div class="form-group three-inputs">
           <label for="campoInt">No. interior</label>
-          <input type="text" class="form-control col-xs-3" name="campoInt" id="campoInt" value="">
+          <input type="text" class="form-control col-xs-3" name="campoInt" id="campoInt" value=""/>
         </div>
         <div class="form-group three-inputs">
           <label for="campoExt">No. exterior</label>
-          <input type="text" class="form-control col-xs-3" name="campoExt" id="campoExt" value="">
+          <input type="text" class="form-control col-xs-3" name="campoExt" id="campoExt" value=""/>
         </div>
-        </div>
+      </div>
           <div class="form-group two-inputs">
             <label for="campoColonia">Colonia</label>
-            <input type="text" class="form-control" name="campoColonia" id="campoColonia" value="">
+            <input type="text" class="form-control" name="campoColonia" id="campoColonia" value=""/>
           </div>
           <div class="form-group two-inputs">
           <label for="campoTelefono">Teléfono</label>
-          <input type="text" class="form-control" name="campoTelefono" id="campoTelefono" value="">
+          <input type="tel" class="form-control" name="campoTelefono" id="campoTelefono" value=""/>
           </div>
         <div class="form-group two-inputs">
           <label for="Municipio"> Locación </label>
@@ -59,7 +59,7 @@
           <option>Puente Grande</option>
           </select>
         </div>
-        <div class="">
+        <div>
             <h3>Información de reparación</h3>
         </div>
         <div class="form-group two-inputs">
@@ -77,31 +77,48 @@
         </div>
         <div class="form-group two-inputs">
         <label for="campoElectrodomestico">Electrodomestico</label>
-        <input type="text" class="form-control" name="campoElectrodomestico" id="campoElectrodomestico" value="">
+        <input type="text" class="form-control" name="campoElectrodomestico" id="campoElectrodomestico" value=""/>
         </div>
         <div class="form-group">
-          <div class="form-group three-inputs">
-            <label for="fnac">Fecha de finalización<span class="fa fa-xs fa-asterisk"></label>
+          <div class="form-group two-inputs">
+            <label for="fnac">Fecha de finalización</label>
             <div class="input-group">
-              <input type="date" name="fechaFinalizacion" id="fechaFinalizacion" class="form-control" required>
+              <input type="datetime-local" name="fechaFinalizacion" id="fechaFinalizacion" class="form-control"required/>
           </div>
           </div>
-          <div class="form-group three-inputs">
-            <label for="fechaRealizacion">Fecha de Realizacion<span class="fa fa-xs fa-asterisk"></label>
+          <div class="form-group two-inputs">
+            <label for="fechaRealizacion">Fecha de Realizacion</label>
             <div class="input-group">
-              <input type="date" name="fechaRealizacion" id="fechaRealizacion" class="form-control" required>
+              <input type="datetime-local" name="fechaRealizacion" id="fechaRealizacion" class="form-control" required/>
             </div>
           </div>
         </div>
         <div class="form-group two-inputs">
-					<label for="fechaGarantia">Fecha de Garantía<span class="fa fa-xs fa-asterisk"></label>
+					<label for="fechaGarantia">Fecha de Garantía</label>
 					<div class="input-group">
-						<input type="date" name="fechaGarantia" id="fechaGarantia" class="form-control" required>
+						<input type="datetime-local" name="fechaGarantia" id="fechaGarantia" class="form-control" required/>
 				  </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group two-inputs">
             <div class="add-much-space">
+              <label for="No">No. características</label>
+                <select class="form-control two-inputs" name="No" contenteditable="false">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                </select>
+            <input type="button" name="caract" value="Crear" class="btn btn-default">
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="add-space">
+            <input type="button" name="cancel" value="Cancelar" action="index.html" class="btn btn-danger">
             <input type="submit" name="submit" value="Registrar" class="btn btn-primary">
           </div>
         </div>
