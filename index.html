@@ -28,23 +28,23 @@
 				if(usr != '' && passw != ''){
 					var array = $(this).serializeArray();
 					array.push({name:'btnLogin',value:'true'});
+					$.ajax({
+						url: 'php/signin.php',
+						type: 'POST',
+						// dataType: 'Intelligent Guess',
+						data: array
+					})
+					.done(function(x) {
+						console.log("success");
+						console.log(x);
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
 				}
-				$.ajax({
-					url: 'php/signin.php',
-					type: 'POST',
-					dataType: 'Intelligent Guess',
-					data: array
-				})
-				.done(function(x) {
-					console.log("success");
-					console.log(x);
-				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
 
 			});
 
