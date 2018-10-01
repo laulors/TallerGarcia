@@ -1,6 +1,6 @@
 <?php
-	if (isset($_POST['usuario'])) {
-		$x = $_POST['usuario'];
+	if (isset($_POST['btnLogin'])) {
+		$x = "llego";
 		echo $x;
 	}
 
