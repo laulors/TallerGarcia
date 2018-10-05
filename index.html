@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Iniciar sesión</title>
+	<title>Ingresar a sistema</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/signin.css">
 	<link rel="stylesheet" href="css/sticky-footer.css">
@@ -14,12 +14,12 @@
 </head>
 
 <body>
-	<script type="text/javascript">
-		var usrInput = /[A-z0-9.-_]*/g;
+	<script type="text/javascript"> /*Aplicar las validaciones en los campos*/
+		var usrInput = /[A-z0-9.-_]*/g; /*Expresion regular de input de Usuario*/
 		$(document).ready(function() {
 			$('#user').focusout(function() {
 				var usr = $(this).val();
-				$(this).addClass('has-error');
+				$(this)parent().addClass('has-error');
 			});
 
 			$('#login').submit(function(e) {
