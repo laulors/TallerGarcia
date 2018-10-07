@@ -1,5 +1,5 @@
 <?php
-	function bd(){
+	function db(){
 		$info = array(
 			'host' => 'localhost',
 			'dbname' => 'taller',
