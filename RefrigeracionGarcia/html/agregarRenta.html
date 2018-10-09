@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Agregar Renta</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/registrarCliente.css">
+</head>
+
+<body>
+	<div class="container sort">
+		<form class="adduser text-justify">
+			<div class="add-space">
+				<h1>Ingrese datos de Renta</h1>
+			</div>
+			<div class="form-group paint">
+				<div class="form-group col-md-5 col-lg-10 col-sm-2 col-md-offset-3 col-lg-offset-2">
+					<label for="campoLavadora">Selecciona lavadora</label>
+					<input type="text" class="form-control col-xs-3 col-lg-2" name="campoLavadora" id="lavadora" value="">
+				</div>
+				<div class="form-group col-md-5 col-lg-10 col-sm-2 col-md-offset-3 col-lg-offset-2">
+					<label for="campoEntrega">Fecha Entrega</label>
+					<input type="date" min="2018-09-19" class="form-control col-xs-3 col-lg-2" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="campoEntrega" id="fEntrega" value="">
+				</div>
+				<div class="form-group col-md-5 col-lg-10 col-sm-2 col-md-offset-3 col-lg-offset-2">
+					<label for="fdevolucion">Fecha Devolución</label>
+					<input type="date" class="form-control col-xs-3 col-lg-2" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="fdevolucion" id="fdevolucion" value="">
+				</div>
+				<div class="form-group col-md-5 col-lg-10 col-sm-2 col-md-offset-3 col-lg-offset-2">
+					<label>Si el pago fue realizado marque el siguiente campo </label>
+					<input type="checkbox" name="pagoBoolean" id="pagoCheckBox" value="">
+				</div>
+				<div class="form-group">
+					<div class="add-much-space col-md-5 col-lg-10 col-sm-2 col-md-offset-3 col-lg-offset-2">
+						<input type="submit" name="submit" value="Registrar" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+		</form>
+</body>
+
+</html>
