@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/16x16.png">
 	<title>Ingresar a sistema</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/signin.css">
@@ -12,14 +13,11 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/md5.min.js"></script>
 </head>
-
 <body>
 	<script type="text/javascript">
-		/*Aplicar las validaciones en los campos*/
-		
 		$(document).ready(function() {
-			$('#messages').hide
-			var usrInput = /[A-z0-9.-_]*/g; /*Expresion regular de input de Usuario*/
+			$('#messages').hide();
+			var usrInput = /[A-z0-9.-_]*/g;
 			$('#user').focusout(function() {
 				var usr = $(this).val();
 				if (usrInput.test(usr)) {
@@ -45,24 +43,25 @@
 							// dataType: 'Intelligent Guess',
 							data: a
 						})
-						.done(function(data) {
-							data = JSON.parse(data);
-							switch (data.work) {
-								case "true":
 
+						.done(function(dta){
+
+							dta = JSON.parse(dta);
+							switch (dta.work) {
+								case "true":
+									window.location.replace("html/index.php");
 								break;
 								case "false":
-									$('#messages').append('<li>'+data.message+'</li>')
+									$('#messages').append('<li>'+dta.message+'</li>')
 								break;
 							}
-							console.log(data);
+							console.log(dta);
+
 						})
+
 						.fail(function() {
 							console.log("error");
-						})
-						.always(function() {
-							console.log("complete");
-						})
+						});
 				}
 
 			});

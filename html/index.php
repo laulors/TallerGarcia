@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 
 <head>
 	<meta charset="utf-8">
@@ -7,8 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
-	<meta name="author" content="Laura Lorena Garcia Rameno">
-	<link rel="icon" href="../../favicon.ico">
+	<link rel="icon" href="../images/16x16.png">
 
 	<title>Refigeración García</title>
 
@@ -31,10 +30,21 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+<?php
+	require_once '../php/config.php';
+	require_once '../php/methods.php';
 
-<body>
+	session_start();
 
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	if(!isset($_SESSION['user'])){
+		header('location: ../');
+	}
+
+	$cnf = db();
+	$conn = dbconnection($cnf);
+
+?>
+<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -43,13 +53,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<h3 class="brand">Bienvenidos a Refrigeración García</h3>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<ul class="nav navbar-nav">
 						<li class="dropdown open">
-							<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
 								Cliente
 								<span class="caret"></span>
 							</a>
@@ -63,7 +72,7 @@
 					</ul>
 					<ul class="nav navbar-nav">
 						<li class="dropdown open">
-							<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
 								Trabajo
 								<span class="caret"></span>
 							</a>
@@ -77,7 +86,7 @@
 					</ul>
 					<ul class="nav navbar-nav">
 						<li class="dropdown open">
-							<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
 								Piezas
 								<span class="caret"></span>
 							</a>
@@ -91,7 +100,7 @@
 					</ul>
 					<ul class="nav navbar-nav">
 						<li class="dropdown open">
-							<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
 								Rentas
 								<span class="caret"></span>
 							</a>
@@ -115,26 +124,25 @@
 		<div class="row">
 
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<h1 class="page-header">Le puede interesar</h1>
-
+				<!-- <h1 class="page-header">Le puede interesar</h1> -->
 				<div class="row placeholders">
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/wash.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/EnRenta.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Lavadoras disponibles</h4>
 						<span class="text-muted">Muestra las lavadoras que tenemos disponibles para renta.</span>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/pick.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/PorRecoger.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Lavadoras por recoger</h4>
 						<span class="text-muted">Muestra las lavadoras que tenemos actualmente en renta y detalles de la misma.</span>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/empty.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/SinExistencia.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Piezas sin existencia</h4>
 						<span class="text-muted">Muestra las refacciones que no tienen existencia.</span>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/tool.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/ProximasAvencer.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Piezas proximas a vencer</h4>
 
 						<span class="text-muted">Muestra las refacciones que casi se agotan.</span>
