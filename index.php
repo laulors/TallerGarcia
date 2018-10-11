@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/16x16.png">
 	<title>Ingresar a sistema</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/signin.css">
