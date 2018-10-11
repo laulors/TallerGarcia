@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
-	<link rel="icon" href="../images/16x16.png">
+	<link rel="icon" href="../../favicon.ico">
 
 	<title>Refigeración García</title>
 
@@ -30,14 +30,16 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+<!-- AQUI TRUENA CUANDO LE PONES QUE CONTINUE LA SESION Y HACES LA CONEXION CON LA BASE DE DATOS
+EL REQUIRED_ONCE DA PEDOS SI ES QUE LO PONES. -->
 <?php
 	require_once '../php/config.php';
 	require_once '../php/methods.php';
 
-	session_start();
+	print_r("entre");
 
 	if(!isset($_SESSION['user'])){
-		header('location: ../');
+		
 	}
 
 	$cnf = db();
@@ -127,22 +129,22 @@
 				<!-- <h1 class="page-header">Le puede interesar</h1> -->
 				<div class="row placeholders">
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/EnRenta.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/wash.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Lavadoras disponibles</h4>
 						<span class="text-muted">Muestra las lavadoras que tenemos disponibles para renta.</span>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/PorRecoger.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/pick.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Lavadoras por recoger</h4>
 						<span class="text-muted">Muestra las lavadoras que tenemos actualmente en renta y detalles de la misma.</span>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/SinExistencia.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/empty.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Piezas sin existencia</h4>
 						<span class="text-muted">Muestra las refacciones que no tienen existencia.</span>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/ProximasAvencer.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<img src="../images/tool.gif" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Piezas proximas a vencer</h4>
 
 						<span class="text-muted">Muestra las refacciones que casi se agotan.</span>

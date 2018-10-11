@@ -17,7 +17,7 @@
 		}
 
 		$errorhandler = array();
-		$hdler = $conexion->prepare('SELECT colonia, numeroext, calle, nombre FROM trabajo AS t INNER JOIN cliente AS c ON c.id = t.idcliente INNER JOIN tipotrabajo AS tt ON tt.id = t.idtipotrabajo;');
+		$hdler = $conexion->prepare('SELECT * FROM trabajos');
 		$worksData = loadWorks($hdler);
 		if(empty($worksData)){
 			$errorhandler = ['empty','true'=>'No hay trabajos registrados'];
