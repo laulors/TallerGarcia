@@ -33,13 +33,16 @@
 <!-- AQUI TRUENA CUANDO LE PONES QUE CONTINUE LA SESION Y HACES LA CONEXION CON LA BASE DE DATOS
 EL REQUIRED_ONCE DA PEDOS SI ES QUE LO PONES. -->
 <?php
+
+	session_start();
+	
 	require_once '../php/config.php';
 	require_once '../php/methods.php';
 
 	print_r("entre");
 
 	if(!isset($_SESSION['user'])){
-		
+		header('location: ../');
 	}
 
 	$cnf = db();
