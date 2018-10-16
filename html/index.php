@@ -1,51 +1,32 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
-
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
 	<link rel="icon" href="../images/16x16.png">
 
 	<title>Refigeración García</title>
 
-	<!-- Bootstrap core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link href="../css/dashboard2.css" rel="stylesheet">
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 	<!--[if lt IE 9]><script src="../js/ie8-responsive-file-warning.js"></script><![endif]-->
 	<script src="../js/ie-emulation-modes-warning.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-<!-- AQUI TRUENA CUANDO LE PONES QUE CONTINUE LA SESION Y HACES LA CONEXION CON LA BASE DE DATOS
-EL REQUIRED_ONCE DA PEDOS SI ES QUE LO PONES. -->
-<?php
-
-require_once '../php/config.php';
-require_once '../php/methods.php';
-
-	session_start();
-
-	if(!isset($_SESSION['user'])){
-		header('location: ../');
-	}
-
-?>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -54,52 +35,59 @@ require_once '../php/methods.php';
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
+				<a class="navbar-brand" href="#">Refigeración García</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href=""><i class="fa fa-user-plus"></i> Agregar Cliente</a></li>
-							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Clientes</a></li>
-							<li><a href=""><i class="fa fa-search"></i> Buscar Cliente</a></li>
-							<li><a href=""><i class="fa fa-user-times"></i> Eliminar Cliente</a></li>
-							<li><a href=""><i class="fa fa-pencil"></i> Modificar Cliente</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-plus"></i> Agregar Cliente</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-users"></i> Mostrar Clientes</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Clientes</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Cliente</a></li>
+							<!-- <li role="separator" class="divider"></li> -->
+							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Cliente</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase"></i> Trabajos <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gavel"></i> Trabajo <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href=""><i class="fa fa-plus"></i> Agregar Trabajo</a></li>
-							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Trabajos</a></li>
-							<li><a href=""><i class="fa fa-search"></i> Buscar Trabajo</a></li>
-							<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Trabajo</a></li>
-							<li><a href=""><i class="fa fa-pencil"></i> Modificar Trabajo</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-gavel"></i> Agregar Trabajo</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-eye"></i> Ver Trabajos</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Trabajo</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Trabajo</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Trabajo</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href=""><i class="fa fa-cart-plus"></i> Agregar Pieza</a></li>
-							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Piezas</a></li>
-							<li><a href=""><i class="fa fa-search"></i> Buscar Pieza</a></li>
-							<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Pieza</a></li>
-							<li><a href=""><i class="fa fa-pencil"></i> Modificar Pieza</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-gear"></i> Agregar Pieza</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-gears"></i> Ver Piezas</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Pieza</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Pieza</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Pieza</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o	"></i> Rentas <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-handshake-o"></i> Rentas <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href=""><i class="fa fa-plus"></i> Agregar Renta</a></li>
-							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Rentas</a></li>
-							<li><a href=""><i class="fa fa-search"></i> Buscar Renta</a></li>
-							<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Renta</a></li>
-							<li><a href=""><i class="fa fa-pencil"></i> Modificar Renta</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-handshake-o"></i> Agregar Renta</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-hourglass-half"></i> Ver Rentas</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Renta</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Renta</a></li>
+							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Renta</a></li>
 						</ul>
 					</li>
+
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../php/exit.php"><i class="fa fa-power-off"></i> Salir</a></li>
+					<li><a href="../php/exit.php">Salir <i class="fa fa-fw fa-sign-out"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -107,34 +95,51 @@ require_once '../php/methods.php';
 
 	<div class="container-fluid">
 		<div class="row">
-
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Reports</a></li>
+					<li><a href="#">Analytics</a></li>
+					<li><a href="#">Export</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li><a href="">Nav item</a></li>
+					<li><a href="">Nav item again</a></li>
+					<li><a href="">One more nav</a></li>
+					<li><a href="">Another nav item</a></li>
+					<li><a href="">More navigation</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li><a href="">Nav item again</a></li>
+					<li><a href="">One more nav</a></li>
+					<li><a href="">Another nav item</a></li>
+				</ul>
+			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<!-- <h1 class="page-header">Le puede interesar</h1> -->
 				<div class="row placeholders">
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/EnRenta.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Lavadoras disponibles</h4>
-						<span class="text-muted">Muestra las lavadoras que tenemos disponibles para renta.</span>
+						<a href=""><img src="../images/EnRenta.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+						<a href=""><h4>Lavadoras disponibles</h4></a>
+						<a href=""><span class="text-muted">Muestra las lavadoras que tenemos disponibles para renta.</span></a>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/PorRecoger.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Lavadoras por recoger</h4>
-						<span class="text-muted">Muestra las lavadoras que tenemos actualmente en renta y detalles de la misma.</span>
+						<a href=""><img src="../images/PorRecoger.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+						<a href=""><h4>Lavadoras por recoger</h4></a>
+						<a href=""><span class="text-muted">Muestra las lavadoras que tenemos actualmente en renta y detalles de la misma.</span></a>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/SinExistencia.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Piezas sin existencia</h4>
-						<span class="text-muted">Muestra las refacciones que no tienen existencia.</span>
+						<a href=""><img src="../images/SinExistencia.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+						<a href=""><h4>Piezas sin existencia</h4></a>
+						<a href=""><span class="text-muted"> Muestra las refacciones que no tienen existencia.</span></a>
 					</div>
 					<div class="col-xs-6 col-sm-3 placeholder">
-						<img src="../images/ProximasAvencer.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Piezas proximas a vencer</h4>
-
-						<span class="text-muted">Muestra las refacciones que casi se agotan.</span>
+						<a href=""><img src="../images/ProximasAvencer.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+						<a href=""><h4>Piezas proximas a vencer</h4></a>
+						<a href=""><span class="text-muted"> Muestra las refacciones que casi se agotan.</span></a>
 					</div>
 				</div>
 
-				<h2 class="sub-header">Trabajos Pendientes</h2>
+				<h2 class="sub-header">Section title</h2>
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
@@ -265,21 +270,13 @@ require_once '../php/methods.php';
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-3 col-md-2 sidebar">
-		<h2 class="page-header">Próximas Rentas</h2>
-	</div>
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')
 	</script>
 	<script src="../js/bootstrap.min.js"></script>
-	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-	<script src="../js/vendor/holder.min.js"></script>
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../js/holder.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 </body>
-
 </html>
