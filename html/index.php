@@ -18,11 +18,12 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/dashboard2.css" rel="stylesheet">
 
 	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 	<!--[if lt IE 9]><script src="../js/ie8-responsive-file-warning.js"></script><![endif]-->
 	<script src="../js/ie-emulation-modes-warning.js"></script>
+	<script src="../js/jquery-3.3.1.min.js"></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -34,19 +35,14 @@
 EL REQUIRED_ONCE DA PEDOS SI ES QUE LO PONES. -->
 <?php
 
-	session_start();
-	
-	require_once '../php/config.php';
-	require_once '../php/methods.php';
+require_once '../php/config.php';
+require_once '../php/methods.php';
 
-	print_r("entre");
+	session_start();
 
 	if(!isset($_SESSION['user'])){
 		header('location: ../');
 	}
-
-	$cnf = db();
-	$conn = dbconnection($cnf);
 
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -61,66 +57,50 @@ EL REQUIRED_ONCE DA PEDOS SI ES QUE LO PONES. -->
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<ul class="nav navbar-nav">
-						<li class="dropdown open">
-							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-								Cliente
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="../html/agregarCliente.html">Agregar</a></li>
-								<li><a href="../html/buscarCliente.html">Buscar</a></li>
-								<li><a href="../html/modificarCliente.html">Modificar</a></li>
-								<li><a href="../html/eliminarCliente.html">Eliminar</a></li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav">
-						<li class="dropdown open">
-							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-								Trabajo
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="../html/agregarTrabajo.html">Agregar</a></li>
-								<li><a href="../html/buscarTrabajo.html">Buscar</a></li>
-								<li><a href="../html/modificarTrabajo.html">Modificar</a></li>
-								<li><a href="../html/eliminarTrabajo.html">Eliminar</a></li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav">
-						<li class="dropdown open">
-							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-								Piezas
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="../html/registrarPieza.htlm">Agregar</a></li>
-								<li><a href="../html/buscarPieza.html">Buscar</a></li>
-								<li><a href="../html/modificarPieza.html">Modificar</a></li>
-								<li><a href="--/html/eliminarPieza.html">Eliminar</a></li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav">
-						<li class="dropdown open">
-							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-								Rentas
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="../html/registrarRenta.html">Agregar</a></li>
-								<li><a href="../html/buscarRenta.html">Buscar</a></li>
-								<li><a href="../html/modificarRenta.html">Modificar</a></li>
-								<li><a href="../html/eliminarRenta.html">Eliminar</a></li>
-							</ul>
-						</li>
-					</ul>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href=""><i class="fa fa-user-plus"></i> Agregar Cliente</a></li>
+							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Clientes</a></li>
+							<li><a href=""><i class="fa fa-search"></i> Buscar Cliente</a></li>
+							<li><a href=""><i class="fa fa-user-times"></i> Eliminar Cliente</a></li>
+							<li><a href=""><i class="fa fa-pencil"></i> Modificar Cliente</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase"></i> Trabajos <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href=""><i class="fa fa-plus"></i> Agregar Trabajo</a></li>
+							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Trabajos</a></li>
+							<li><a href=""><i class="fa fa-search"></i> Buscar Trabajo</a></li>
+							<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Trabajo</a></li>
+							<li><a href=""><i class="fa fa-pencil"></i> Modificar Trabajo</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href=""><i class="fa fa-cart-plus"></i> Agregar Pieza</a></li>
+							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Piezas</a></li>
+							<li><a href=""><i class="fa fa-search"></i> Buscar Pieza</a></li>
+							<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Pieza</a></li>
+							<li><a href=""><i class="fa fa-pencil"></i> Modificar Pieza</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o	"></i> Rentas <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href=""><i class="fa fa-plus"></i> Agregar Renta</a></li>
+							<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Rentas</a></li>
+							<li><a href=""><i class="fa fa-search"></i> Buscar Renta</a></li>
+							<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Renta</a></li>
+							<li><a href=""><i class="fa fa-pencil"></i> Modificar Renta</a></li>
+						</ul>
+					</li>
 				</ul>
-				<form class="navbar-form navbar-right">
-					<input type="text" class="form-control" placeholder="Buscar...">
-				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../php/exit.php"><i class="fa fa-power-off"></i> Salir</a></li>
+				</ul>
 			</div>
 		</div>
 	</nav>
@@ -293,7 +273,7 @@ EL REQUIRED_ONCE DA PEDOS SI ES QUE LO PONES. -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
-		window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
+		window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')
 	</script>
 	<script src="../js/bootstrap.min.js"></script>
 	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->

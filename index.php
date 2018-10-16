@@ -14,6 +14,13 @@
 	<script src="js/md5.min.js"></script>
 </head>
 <body>
+	<?php
+		session_start();
+
+		if (isset($_SESSION['user'])) {
+			header('location: html/');
+		}
+	?>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#messages').hide();
