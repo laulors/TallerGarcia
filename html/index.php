@@ -140,6 +140,7 @@
 				</div>
 
 				<h2 class="sub-header">Section title</h2>
+				</div>
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
@@ -266,7 +267,6 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
 			</div>
 		</div>
 	</div>

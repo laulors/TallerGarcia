@@ -4,7 +4,7 @@
 			'host' => 'localhost',
 			'dbname' => 'taller',
 			'user' => 'root',
-			'password' => ''
+			'password' => 'pig'
 		);
 		return $info;
 	}

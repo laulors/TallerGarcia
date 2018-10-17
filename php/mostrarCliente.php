@@ -9,7 +9,6 @@
 		$query = $conn->prepare('SELECT u.nombre,u.apellidop,u.apellidom,c.numeroint,c.numeroext,c.calle,c.colonia,c.municipio,c.telefono FROM usuario u INNER JOIN cliente c ON u.id = c.idusuario;');
 		$query->execute();
 		$info = $query->fetchAll(PDO::FETCH_ASSOC);
-		$results = json_encode($info);
-		echo $results;
+		echo json_encode($info);
 	}
 ?>
