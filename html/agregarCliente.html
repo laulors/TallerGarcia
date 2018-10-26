@@ -12,6 +12,7 @@
 		<link href="../css/dashboard.css" rel="stylesheet">
 		<link href="../css/registrar.css" rel="stylesheet">
 		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
 		<!--[if lt IE 9]><script src="../js/ie8-responsive-file-warning.js"></script><![endif]-->
 		<script src="../js/ie-emulation-modes-warning.js"></script>
 		<script src="../js/jquery-3.3.1.min.js"></script>
@@ -119,9 +120,13 @@
 						$('#campoNombre').focusout(function() {
 							var nombre = $(this).val();
 							if (name.test(name)) {
-								$(this).parent().removeClass('has-error')
-							} else {
-								$(this).parent().addClass('has-error')
+								$(this).parent().removeClass('has-error');
+							}else {
+								if($(this).val()==""){
+									$(this).parent().removeClass('has-error');
+								}else{
+									$(this).parent().addClass('has-error');
+								}
 							}
 						});
 						$('#campoApellidoPaterno').focusout(function() {
@@ -129,7 +134,11 @@
 							if (name.test(name)) {
 								$(this).parent().removeClass('has-error');
 							} else {
-								$(this).parent().addClass('has-error');
+								if($(this).val()==""){
+									$(this).parent().removeClass('has-error');
+								}else{
+									$(this).parent().addClass('has-error');
+								}
 							}
 						});
 						$('#campoApellidoMaterno').focusout(function() {
@@ -137,7 +146,11 @@
 							if (name.test(name)) {
 								$(this).parent().removeClass('has-error');
 							} else {
-								$(this).parent().addClass('has-error');
+								if($(this).val()==""){
+									$(this).parent().removeClass('has-error');
+								}else{
+									$(this).parent().addClass('has-error');
+								}
 							}
 						});
 						$('#campoCalle').focusout(function() {
@@ -145,7 +158,11 @@
 							if (colonia.test(calle)) {
 								$(this).parent().removeClass('has-error');
 							} else {
-								$(this).parent().addClass('has-error');
+								if($(this).val()==""){
+									$(this).parent().removeClass('has-error');
+								}else{
+									$(this).parent().addClass('has-error');
+								}
 							}
 						});
 						$('#campoExt').focusout(function() {
@@ -153,15 +170,21 @@
 							if (number.test(nExt)) {
 								$(this).parent().removeClass('has-error');
 							} else {
-								$(this).parent().addClass('has-error');
+								if($(this).val()==""){
+									$(this).parent().removeClass('has-error');
+								}else{
+									$(this).parent().addClass('has-error');
+								}
 							}
 						});
 						$('#campoInt').focusout(function() {
 							var nInt = $(this).val();
-							if (nInt != '') {
-								if (number.test(nInt)) {
+							if (number.test(nInt)) {
+								$(this).parent().removeClass('has-error');
+							} else {
+								if($(this).val()==""){
 									$(this).parent().removeClass('has-error');
-								} else {
+								}else{
 									$(this).parent().addClass('has-error');
 								}
 							}
@@ -171,7 +194,11 @@
 							if (colonia.test(suburb)) {
 								$(this).parent().removeClass('has-error');
 							} else {
-								$(this).parent().addClass('has-error');
+								if($(this).val()==""){
+									$(this).parent().removeClass('has-error');
+								}else{
+									$(this).parent().addClass('has-error');
+								}
 							}
 						});
 						$('#campoTelefono').focusout(function() {
@@ -179,9 +206,12 @@
 							if (phone.test(tel)) {
 								$(this).parent().removeClass('has-error');
 							} else {
-								$(this).parent().addClass('has-error');
+								if($(this).val()==""){
+									$(this).parent().removeClass('has-error');
+								}else{
+									$(this).parent().addClass('has-error');
+								}
 							}
-							console.log(tel);
 						})
 						$('#fmCliente').submit(function(e) {
 								e.preventDefault();
@@ -206,26 +236,26 @@
 											case 'true':
 													$("html, body").animate({ scrollTop: 0 }, "slow");
 													$('#message').append('<div class="alert alert-success alert-dismissible" role="alert">'+
-														'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+																	'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
 													s.mensaje+' <i class="fa fa-'+s.icon+'"></i></div>');
 												break;
 											case 'error':
 												$("html, body").animate({ scrollTop: 0 }, "slow");
 												$('#message').append('<div class="alert alert-warning alert-dismissible" role="alert">'+
-													'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+																'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
 												s.mensaje+' <i class="fa fa-'+s.icon+'"></i></div>');
 												break;
 											case 'log':
 												$("html, body").animate({ scrollTop: 0 }, "slow");
 												$('#message').append('<div class="alert alert-error alert-dismissible" role="alert">'+
-													'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+																'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
 												'Favor de intentar mas tarde <i class="fa fa-'+s.icon+'"></i></div>');
 												console.log(s.mensaje);
 											break;
 											case 'db':
 												$("html, body").animate({ scrollTop: 0 }, "slow");
 												$('#message').append('<div class="alert alert-error alert-dismissible" role="alert">'+
-													'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+																'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
 												'Error al conectar a la base de datos, intentalo mas tarde <i class="fa fa-'+s.icon+'"></i></div>');
 												console.log(s.mensaje);
 											break;
@@ -247,40 +277,40 @@
 					</div>
 					<form class="text-center col-md-8 col-md-offset-2" id="fmCliente">
 						<div class="form-group">
-							<label for="campoNombre">Nombre</label>
-							<input type="text" class="form-control" name="campoNombre" id="campoNombre" value="">
+							<label for="campoNombre">Nombre <i class="fa fa-asterisk"></i></label>
+							<input type="text" class="form-control" name="campoNombre" id="campoNombre" value="" required>
 						</div>
 						<div class="form-group">
-							<label for="campoApellido">Apellido Paterno</label>
-							<input type="text" class="form-control" name="campoApellidoPaterno" id="campoApellidoPaterno" value="">
+							<label for="campoNombre">Apellido paterno <i class="fa fa-asterisk"></i></label>
+							<input type="text" class="form-control" name="campoApellidoPaterno" id="campoApellidoPaterno" value="" required>
 						</div>
 						<div class="form-group">
-							<label for="campoApellido">Apellido Materno</label>
+							<label for="campoNombre">Apellido materno </label>
 							<input type="text" class="form-control" name="campoApellidoMaterno" id="campoApellidoMaterno" value="">
 						</div>
 						<div class="form-group">
-							<label for="campoCalle">Calle</label>
-							<input type="text" class="form-control" name="campoCalle" id="campoCalle" value="">
+							<label for="campoNombre">Calle <i class="fa fa-asterisk"></i></label>
+							<input type="text" class="form-control" name="campoCalle" id="campoCalle" value="" required>
 						</div>
 						<div class="col-md-6 form-group">
-							<label for="campoInt">No. interior</label>
-							<input type="text" class="form-control" name="campoInt" id="campoInt" value="">
+							<label for="campoNombre">No. interior <i class="fa fa-asterisk"></i></label>
+							<input type="text" class="form-control" name="campoInt" id="campoInt" value="" required>
 						</div>
 						<div class="col-md-6 form-group">
-							<label for="campoExt">No. exterior</label>
-							<input type="text" class="form-control" name="campoExt" id="campoExt" value="">
+							<label for="campoNombre">No. Exterior <i class="fa fa-asterisk"></i></label>
+							<input type="text" class="form-control" name="campoExt" id="campoExt" value="" required>
 						</div>
 						<div class="form-group">
-							<label for="campoColonia">Colonia</label>
-							<input type="text" class="form-control" name="campoColonia" id="campoColonia" value="">
+							<label for="campoNombre">Colonia <i class="fa fa-asterisk"></i></label>
+							<input type="text" class="form-control" name="campoColonia" id="campoColonia" value="" required>
 						</div>
 						<div class="form-group">
-							<label for="campoTelefono">Teléfono</label>
-							<input type="text" class="form-control" name="campoTelefono" id="campoTelefono" value="">
+							<label for="campoNombre">Telefono <i class="fa fa-asterisk"></i></label>
+							<input type="text" class="form-control" name="campoTelefono" id="campoTelefono" value=""required>
 						</div>
 						<div class="form-group">
-							<label for="Municipio"> Locación </label>
-							<select name="Municipio" id="Municipio" class="form-control text-center">
+							<label for="campoNombre">Locacion <i class="fa fa-asterisk"></i></label>
+							<select name="Municipio" id="Municipio" class="selectpicker form-control text-center" required>
 								<option selected disabled>Selecciona una Ciudad</option>
 								<option value="San Juan Cosala">San Juan Cosala</option>
 								<option value="Guadalajara">Guadalajara</option>
@@ -291,6 +321,7 @@
 								<option value="Puente Grande">Puente Grande</option>
 							</select>
 						</div>
+						<p class="text-muted">Los campos con un <i class="fa fa-asterisk"></i> son obligatorios.</p>
 						<input type="submit" name="submit" value="Registrar" class="btn btn-primary col-md-6 col-md-offset-3 col-xs-12">
 					</form>
 				</div>
@@ -303,5 +334,6 @@
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/holder.min.js"></script>
 		<script src="../js/ie10-viewport-bug-workaround.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 	</body>
 </html>

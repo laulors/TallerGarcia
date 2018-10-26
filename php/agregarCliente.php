@@ -2,15 +2,15 @@
 	require_once 'config.php';
 	require_once 'methods.php';
 	if(isset($_POST['btnRegister'])){
-		$nombre = $_POST['campoNombre'];
-		$apellidom = (empty($_POST['campoApellidoMaterno'])) ? "" : $_POST['campoApellidoMaterno'];
-		$apellidop = $_POST['campoApellidoPaterno'];
-		$calle = $_POST['campoCalle'];
-		$municipio = $_POST['Municipio'];
+		$nombre = strtolower($_POST['campoNombre']);
+		$apellidom = (empty($_POST['campoApellidoMaterno'])) ? "" : strtolower($_POST['campoApellidoMaterno']);
+		$apellidop = strtolower($_POST['campoApellidoPaterno']);
+		$calle = strtolower($_POST['campoCalle']);
+		$municipio = strtolower($_POST['Municipio']);
 		$ext = $_POST['campoExt'];
 		$interior = (empty($_POST['campoInt'])) ? "" : $_POST['campoInt'];
 		$telefono = $_POST['campoTelefono'];
-		$colonia = $_POST['campoColonia'];
+		$colonia = strtolower($_POST['campoColonia']);
 		$status = array();
 					if (!empty($nombre) && !empty($apellidop) &&	!empty($calle) && !empty($municipio) &&	!empty($ext) &&	!empty($telefono) && !empty($colonia)){
 			
