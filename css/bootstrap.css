@@ -1099,6 +1099,7 @@ textarea {
 a {
   color: #337ab7;
   text-decoration: none;
+  text-align: center;
 }
 a:hover,
 a:focus {
@@ -3003,7 +3004,7 @@ select[multiple].input-lg {
 .btn {
   display: inline-block;
   padding: 6px 12px;
-  margin-bottom: 0;
+  margin-bottom: 6px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -3020,6 +3021,7 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  margin-top: 6px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -3522,13 +3524,13 @@ tbody.collapse.in {
   top: 100%;
   left: 0;
   z-index: 1000;
-  display: none;
+  display: block;
   float: left;
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   list-style: none;
   background-color: #fff;
   -webkit-background-clip: padding-box;
@@ -4323,11 +4325,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-nav {
   margin: 7.5px -15px;
 }
+
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+  text-align: center;
 }
+
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;

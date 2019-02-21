@@ -39,6 +39,34 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 
 }
+form {
+  padding-top: 2em;
+  padding-bottom: 1.5em;
+  border-radius: .5em;
+  background: rgba(61,112,178, 0.2);
+}
+.searchInput {
+
+    display: inline-block;
+    width: 20%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin-bottom:6px;
+    margin-top:6px;
+}
+
 @media screen and (max-width:400px){
   .tableResults{
     margin-top: 3em;
@@ -57,4 +85,26 @@ body{
   body{
     padding-left: 0%;
   }
+}
+
+.btnSearch{
+  display: inline-block;
+  padding: 2px 6px;
+  margin-bottom: 15;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }

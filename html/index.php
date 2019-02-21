@@ -42,46 +42,41 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="#"><i class="fa fa-fw fa-plus"></i> Agregar Cliente</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-users"></i> Mostrar Clientes</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Clientes</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Cliente</a></li>
-							<!-- <li role="separator" class="divider"></li> -->
-							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Cliente</a></li>
+							<li><a href="agregarCliente.html"><i class="fa fa-user-plus"></i> Agregar Cliente</a></li>
+							<li><a href="mostrarCliente.html"><i class="fa fa-list-alt"></i> Mostrar Clientes</a></li>
+							<li><a href="buscarCliente.html"><i class="fa fa-search"></i> Buscar Cliente</a></li>
+							<li><a href="eliminarCliente.html"><i class="fa fa-user-times"></i> Eliminar Cliente</a></li>
+							<li><a href="modificarCliente.html"><i class="fa fa-pencil"></i> Modificar Cliente</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gavel"></i> Trabajo <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase"></i> Trabajos <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="#"><i class="fa fa-fw fa-gavel"></i> Agregar Trabajo</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-eye"></i> Ver Trabajos</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Trabajo</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Trabajo</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Trabajo</a></li>
+							<li><a href="agregarTrabajo.html"><i class="fa fa-plus"></i> Agregar Trabajo</a></li>
+							<li><a href="mostrarTrabajos.html"><i class="fa fa-list-alt"></i> Mostrar Trabajos</a></li>
+							<li><a href="buscarTrabajo.html"><i class="fa fa-search"></i> Buscar Trabajo</a></li>
+							<li><a href="eliminarTrabajo.html"><i class="fa fa-trash-o"></i> Eliminar Trabajo</a></li>
+							<li><a href="modificarTrabajo.html"><i class="fa fa-pencil"></i> Modificar Trabajo</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="#"><i class="fa fa-fw fa-gear"></i> Agregar Pieza</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-gears"></i> Ver Piezas</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Pieza</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Pieza</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Pieza</a></li>
+							<li><a href="agregarPieza.html"><i class="fa fa-cart-plus"></i> Agregar Pieza</a></li>
+							<li><a href="mostrarPiezas.html"><i class="fa fa-list-alt"></i> Mostrar Piezas</a></li>
+							<li><a href="buscarPieza.html"><i class="fa fa-search"></i> Buscar Pieza</a></li>
+							<li><a href="eliminarPieza.html"><i class="fa fa-trash-o"></i> Eliminar Pieza</a></li>
+							<li><a href="modificarPieza.html"><i class="fa fa-pencil"></i> Modificar Pieza</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-handshake-o"></i> Rentas <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o	"></i> Rentas <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="#"><i class="fa fa-fw fa-handshake-o"></i> Agregar Renta</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-hourglass-half"></i> Ver Rentas</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-search"></i> Buscar Renta</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#"><i class="fa fa-fw fa-pencil"></i> Editar Renta</a></li>
-							<li><a href="#"><i class="fa fa-fw fa-trash-o"></i> Eliminar Renta</a></li>
+							<li><a href="agregarRenta.html"><i class="fa fa-plus"></i> Agregar Renta</a></li>
+							<li><a href="mostrarRentas.html"><i class="fa fa-list-alt"></i> Mostrar Rentas</a></li>
+							<li><a href="buscarRentas.html"><i class="fa fa-search"></i> Buscar Renta</a></li>
+							<li><a href="eliminarRenta.html"><i class="fa fa-trash-o"></i> Eliminar Renta</a></li>
+							<li><a href="modificarRenta.html"><i class="fa fa-pencil"></i> Modificar Renta</a></li>
 						</ul>
 					</li>
 
@@ -97,22 +92,13 @@
 		<div class="row">
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
-					<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">Reports</a></li>
-					<li><a href="#">Analytics</a></li>
-					<li><a href="#">Export</a></li>
+					
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="">Nav item</a></li>
-					<li><a href="">Nav item again</a></li>
-					<li><a href="">One more nav</a></li>
-					<li><a href="">Another nav item</a></li>
-					<li><a href="">More navigation</a></li>
+					
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="">Nav item again</a></li>
-					<li><a href="">One more nav</a></li>
-					<li><a href="">Another nav item</a></li>
+					
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -139,7 +125,7 @@
 					</div>
 				</div>
 
-				<h2 class="sub-header">Section title</h2>
+				<h2 class="sub-header">Trabajos pendientes</h2>
 				</div>
 				<div class="table-responsive">
 					<table class="table table-striped">
