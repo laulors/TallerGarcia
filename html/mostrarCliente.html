@@ -3,35 +3,32 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
 		<link rel="icon" href="../images/16x16.png">
-		
+
 		<title>Refrigeración García</title>
 
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link href="../css/dashboard.css" rel="stylesheet">
-		<link href="../css/registrar.css" rel="stylesheet">
-		<script src="../js/ie-emulation-modes-warning.js"></script>
 		<script src="../js/jquery-3.3.1.min.js"></script>
 	</head>
 	<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Refigeración García</a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
-						<ul class="dropdown-menu">
+					</button>
+					<a class="navbar-brand" href="index.html">Refrigeracion Garcia</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
+							<ul class="dropdown-menu">
 							<li><a href="agregarCliente.html"><i class="fa fa-user-plus"></i> Agregar Cliente</a></li>
 							<li><a href="mostrarCliente.html"><i class="fa fa-list-alt"></i> Mostrar Clientes</a></li>
 							<li><a href="buscarCliente.html"><i class="fa fa-search"></i> Buscar Cliente</a></li>
@@ -40,7 +37,7 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase"></i> Trabajos <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase"></i> Trabajos <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
 							<li><a href="agregarTrabajo.html"><i class="fa fa-plus"></i> Agregar Trabajo</a></li>
 							<li><a href="mostrarTrabajos.html"><i class="fa fa-list-alt"></i> Mostrar Trabajos</a></li>
@@ -50,7 +47,7 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
 							<li><a href="agregarPieza.html"><i class="fa fa-cart-plus"></i> Agregar Pieza</a></li>
 							<li><a href="mostrarPiezas.html"><i class="fa fa-list-alt"></i> Mostrar Piezas</a></li>
@@ -60,58 +57,82 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o	"></i> Rentas <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o	"></i> Rentas <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu">
 							<li><a href="agregarRenta.html"><i class="fa fa-plus"></i> Agregar Renta</a></li>
 							<li><a href="mostrarRentas.html"><i class="fa fa-list-alt"></i> Mostrar Rentas</a></li>
 							<li><a href="buscarRentas.html"><i class="fa fa-search"></i> Buscar Renta</a></li>
 							<li><a href="eliminarRenta.html"><i class="fa fa-trash-o"></i> Eliminar Renta</a></li>
 							<li><a href="modificarRenta.html"><i class="fa fa-pencil"></i> Modificar Renta</a></li>
-						</ul>
-					</li>
-
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="../php/exit.php">Salir <i class="fa fa-fw fa-sign-out"></i></a>
-					</li>
-				</ul>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="../php/exit.php"><i class="fa fa-power-off"></i> Salir</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-3 col-md-2 sidebar">
-					<ul class="nav nav-sidebar">
-						<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-						<li><a href="#">Reports</a></li>
-						<li><a href="#">Analytics</a></li>
-						<li><a href="#">Export</a></li>
-					</ul>
-					<ul class="nav nav-sidebar">
-						<li><a href="">Nav item</a></li>
-						<li><a href="">Nav item again</a></li>
-						<li><a href="">One more nav</a></li>
-						<li><a href="">Another nav item</a></li>
-						<li><a href="">More navigation</a></li>
-					</ul>
-					<ul class="nav nav-sidebar">
-						<li><a href="">Nav item again</a></li>
-						<li><a href="">One more nav</a></li>
-						<li><a href="">Another nav item</a></li>
-					</ul>
-				</div>
+				<ul class="nav nav-sidebar">
+					
+				</ul>
+				<ul class="nav nav-sidebar">
+					
+				</ul>
+				<ul class="nav nav-sidebar">
+					
+				</ul>
+			</div>
+				<script>
+					jQuery(document).ready(function($) {
+						$.ajax({
+							url: '../php/mostrarCliente.php',
+							type: 'GET',
+							data: { Cliente: 'cliente'},
+						})
+						.done(function(e) {
+							result = JSON.parse(e);
+							for(i=0; i<result.length; i++){
+								//console.log(result[i].nombre);
+								$('#mostrarTabla tbody').append("<tr>"+
+									"<td>"+result[i].nombre+"</td>"+
+									"<td>"+result[i].apellidop+" "+result[i].apellidom+"</td>"+
+									"<td>"+result[i].calle+" # Exterior: "+result[i].numeroext+" # Interior:"+result[i].numeroint+" "+result[i].colonia" "+result[i].municipio+"</td>"+
+									"<td>"+result[i].telefono+"</td>"+
+								"</tr>")
+							}
+
+						})
+						.fail(function() {
+							console.log("error");
+											});
+					});
+				</script>
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-					<h1 class="page-header text-center">Agregar Tipo Electrodomestico</h1>
-					<form class="text-center col-md-8 col-md-offset-2">
-						<div class="form-group">
-							<label for="namef">Nombre</label>
-							<input type="text" class="form-control" name="namef" id="namef" value="">
-						</div>
-						<div class="form-group">
-							<input type="submit" name="submit" value="Registrar" class="btn btn-primary ">
-						</div>
-					</form>
+					<h1 class="page-header">Mostrar Clientes</h1>
+					<div class="table-responsive">
+						<table class="table table-striped" id="mostrarTabla" name = "mostrarTabla">
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Apellidos</th>
+									<th>Domicilio</th>
+									<th>Telefono</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>No hay datos disponibles</td>
+									<td> </td>
+									<td> </td>
+									<td> </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
