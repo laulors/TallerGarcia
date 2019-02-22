@@ -16,66 +16,69 @@
 		<script src="../js/jquery-3.3.1.min.js"></script>
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Refrigeracion Garcia</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href="agregarCliente.html"><i class="fa fa-user-plus"></i> Agregar Cliente</a></li>
-								<li><a href="mostrarCliente.html"><i class="fa fa-list-alt"></i> Mostrar Clientes</a></li>
-								<li><a href=""><i class="fa fa-search"></i> Buscar Cliente</a></li>
-								<li><a href=""><i class="fa fa-user-times"></i> Eliminar Cliente</a></li>
-								<li><a href=""><i class="fa fa-pencil"></i> Modificar Cliente</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase"></i> Trabajos <i class="fa fa-caret-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href=""><i class="fa fa-plus"></i> Agregar Trabajo</a></li>
-								<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Trabajos</a></li>
-								<li><a href=""><i class="fa fa-search"></i> Buscar Trabajo</a></li>
-								<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Trabajo</a></li>
-								<li><a href=""><i class="fa fa-pencil"></i> Modificar Trabajo</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href=""><i class="fa fa-cart-plus"></i> Agregar Pieza</a></li>
-								<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Piezas</a></li>
-								<li><a href=""><i class="fa fa-search"></i> Buscar Pieza</a></li>
-								<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Pieza</a></li>
-								<li><a href=""><i class="fa fa-pencil"></i> Modificar Pieza</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o	"></i> Rentas <i class="fa fa-caret-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href=""><i class="fa fa-plus"></i> Agregar Renta</a></li>
-								<li><a href=""><i class="fa fa-list-alt"></i> Mostrar Rentas</a></li>
-								<li><a href=""><i class="fa fa-search"></i> Buscar Renta</a></li>
-								<li><a href=""><i class="fa fa-trash-o"></i> Eliminar Renta</a></li>
-								<li><a href=""><i class="fa fa-pencil"></i> Modificar Renta</a></li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="../php/exit.php"><i class="fa fa-power-off"></i> Salir</a></li>
-					</ul>
-				</div>
+				</button>
+				<a class="navbar-brand" href="#">Refigeración García</a>
 			</div>
-		</nav>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-users"></i> Clientes <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="agregarCliente.html"><i class="fa fa-user-plus"></i> Agregar Cliente</a></li>
+							<li><a href="mostrarCliente.html"><i class="fa fa-list-alt"></i> Mostrar Clientes</a></li>
+							<li><a href="buscarCliente.html"><i class="fa fa-search"></i> Buscar Cliente</a></li>
+							<li><a href="eliminarCliente.html"><i class="fa fa-user-times"></i> Eliminar Cliente</a></li>
+							<li><a href="modificarCliente.html"><i class="fa fa-pencil"></i> Modificar Cliente</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase"></i> Trabajos <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="agregarTrabajo.html"><i class="fa fa-plus"></i> Agregar Trabajo</a></li>
+							<li><a href="mostrarTrabajos.html"><i class="fa fa-list-alt"></i> Mostrar Trabajos</a></li>
+							<li><a href="buscarTrabajo.html"><i class="fa fa-search"></i> Buscar Trabajo</a></li>
+							<li><a href="eliminarTrabajo.html"><i class="fa fa-trash-o"></i> Eliminar Trabajo</a></li>
+							<li><a href="modificarTrabajo.html"><i class="fa fa-pencil"></i> Modificar Trabajo</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gear"></i> Piezas <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="agregarPieza.html"><i class="fa fa-cart-plus"></i> Agregar Pieza</a></li>
+							<li><a href="mostrarPiezas.html"><i class="fa fa-list-alt"></i> Mostrar Piezas</a></li>
+							<li><a href="buscarPieza.html"><i class="fa fa-search"></i> Buscar Pieza</a></li>
+							<li><a href="eliminarPieza.html"><i class="fa fa-trash-o"></i> Eliminar Pieza</a></li>
+							<li><a href="modificarPieza.html"><i class="fa fa-pencil"></i> Modificar Pieza</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o	"></i> Rentas <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="agregarRenta.html"><i class="fa fa-plus"></i> Agregar Renta</a></li>
+							<li><a href="mostrarRentas.html"><i class="fa fa-list-alt"></i> Mostrar Rentas</a></li>
+							<li><a href="buscarRentas.html"><i class="fa fa-search"></i> Buscar Renta</a></li>
+							<li><a href="eliminarRenta.html"><i class="fa fa-trash-o"></i> Eliminar Renta</a></li>
+							<li><a href="modificarRenta.html"><i class="fa fa-pencil"></i> Modificar Renta</a></li>
+						</ul>
+					</li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="../php/exit.php">Salir <i class="fa fa-fw fa-sign-out"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-3 col-md-2 sidebar">
